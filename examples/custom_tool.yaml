@@ -1,0 +1,3 @@
+tools:
+  plugins:
+    - examples.custom_tool:register

@@ -1,0 +1,124 @@
+--- a/src/client/game.cpp
++++ b/src/client/game.cpp
+@@ -513,6 +513,7 @@
+ 	bool companion_last_menu = true;
+ 	bool companion_last_focus = false;
+ 	u64 companion_seq = 0;
++	bool companion_crack = false;
+ 
+ 	while (m_rendering_engine->run()
+ 			&& !(*kill || g_gamecallback->shutdown_requested
+@@ -566,6 +567,21 @@
+ 		processUserInput(dtime);
+ 		// Update camera before player movement to avoid camera lag of one frame
+ 		updateCameraDirection(&cam_view_target, dtime);
++		auto &presentation = client->companion_presentation;
++		if (g_settings->exists("jev_bridge_telemetry") && g_settings->getBool("jev_bridge_telemetry")) {
++			presentation.remaining = std::max(0.0f, presentation.remaining - dtime);
++			if (isMenuActive() || !device->isWindowFocused())
++				presentation.remaining = 0.0f;
++			if (presentation.remaining > 0.0f) {
++				v3f delta = presentation.target - (camera->getPosition() + intToFloat(camera->getOffset(), BS));
++				float yaw = std::atan2(-delta.X, delta.Z) * core::RADTODEG;
++				float pitch = presentation.kind == "MOVE" ? 8.0f :
++					-std::atan2(delta.Y, std::hypot(delta.X, delta.Z)) * core::RADTODEG;
++				float turn = std::fmod(yaw - cam_view_target.camera_yaw + 540.0f, 360.0f) - 180.0f;
++				cam_view_target.camera_yaw += std::clamp(turn, -200.0f*dtime, 200.0f*dtime);
++				cam_view_target.camera_pitch += std::clamp(pitch-cam_view_target.camera_pitch, -160.0f*dtime, 160.0f*dtime);
++			}
++		}
+ 		if (m_cache_cam_smoothing <= 0.0f) {
+ 			cam_view.camera_yaw = cam_view_target.camera_yaw;
+ 			cam_view.camera_pitch = cam_view_target.camera_pitch;
+@@ -589,6 +605,7 @@
+ 			companion_timer += dtime;
+ 			if (menu != companion_last_menu || focused != companion_last_focus || companion_timer >= 0.1f) {
+ 				client->joinModChannel("jev_bridge:client");
++				client->joinModChannel("jev_bridge:presentation");
+ 				std::ostringstream msg;
+ 				msg << ++companion_seq << ":" << menu << ":" << focused << ":" << (dtime * 1000.0f);
+ 				client->sendModChannelMessage("jev_bridge:client", msg.str());
+@@ -610,6 +627,22 @@
+ 		updateCamera(dtime);
+ 		updateSound(dtime);
+ 		processPlayerInteraction(dtime, m_game_ui->m_flags.show_hud);
++
++
++		if (presentation.remaining > 0.0f && !isMenuActive()) {
++			if (presentation.kind == "DIG" || presentation.kind == "ATTACK")
++				camera->setDigging(0);
++			else if (presentation.kind == "PLACE")
++				camera->setDigging(1);
++			if (presentation.kind == "DIG") {
++				client->setCrack(std::min(crack_animation_length-1,
++					(int)(presentation.progress*crack_animation_length)), floatToInt(presentation.target, BS));
++				companion_crack = true;
++			}
++		} else if (companion_crack) {
++			client->setCrack(-1, v3s16(0,0,0));
++			companion_crack = false;
++		}
+ 		updateFrame(&graph, &stats, dtime, cam_view);
+ 		updateProfilerGraphs(&graph);
+ 
+--- a/src/client/client.h
++++ b/src/client/client.h
+@@ -263,6 +263,16 @@
+ 
+ 	bool consumeSkipNextWieldAnimation();
+ 
++
++
++	struct CompanionPresentation {
++		u64 sequence = 0;
++		std::string kind;
++		v3f target;
++		float remaining = 0.0f;
++		float progress = 0.0f;
++	} companion_presentation;
++
+ 	/* InventoryManager interface */
+ 	Inventory* getInventory(const InventoryLocation &loc) override;
+ 	void inventoryAction(InventoryAction *a) override;
+--- a/src/network/clientpackethandler.cpp
++++ b/src/network/clientpackethandler.cpp
+@@ -3,6 +3,8 @@
+ // Copyright (C) 2015 nerzhul, Loic Blot <loic.blot@unix-experience.fr>
+ 
+ #include "client/client.h"
++#include <cmath>
++#include <algorithm>
+ 
+ #include "exceptions.h"
+ #include "irr_v2d.h"
+@@ -1780,6 +1782,30 @@
+ 		return;
+ 	}
+ 
++
++
++	if (channel_name == "jev_bridge:presentation" && sender.empty() && channel_msg.size() < 200) {
++		u64 sequence;
++		std::string kind;
++		float x, y, z, progress;
++		int ms;
++		std::istringstream input(channel_msg);
++		if (input >> sequence >> kind >> x >> y >> z >> ms >> progress) {
++			if (sequence > companion_presentation.sequence &&
++					std::isfinite(x) && std::isfinite(y) && std::isfinite(z) &&
++					std::isfinite(progress) && std::abs(x) <= 31000 &&
++					std::abs(y) <= 31000 && std::abs(z) <= 31000 && ms >= 0 && ms <= 800 &&
++					(kind == "STOP" || kind == "MOVE" || kind == "DIG" || kind == "PLACE" || kind == "ATTACK")) {
++				companion_presentation.sequence = sequence;
++				companion_presentation.kind = kind;
++				companion_presentation.target = v3f(x, y, z) * BS;
++				companion_presentation.remaining = kind == "STOP" ? 0.0f : ms / 1000.0f;
++				companion_presentation.progress = std::clamp(progress, 0.0f, 1.0f);
++			}
++		}
++		return;
++	}
++
+ 	if (m_script)
+ 		m_script->on_modchannel_message(channel_name, sender, channel_msg);
+ }

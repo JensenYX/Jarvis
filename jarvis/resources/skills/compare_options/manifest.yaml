@@ -1,0 +1,5 @@
+id: compare_options
+description: Compare alternatives under the user's stated constraints.
+when_to_use: [tradeoffs, multiple plans, numeric comparisons]
+not_for: [greetings, missing essential alternatives]
+tools: [calculate, search_documents]

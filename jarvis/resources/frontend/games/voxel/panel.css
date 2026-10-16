@@ -1,0 +1,75 @@
+.voxel-panel {
+  width: 100%;
+  background: #102323;
+  border-radius: 12px;
+  color: #eef5ee;
+  overflow: hidden;
+}
+.voxel-panel canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 180px);
+  object-fit: contain;
+  outline: none;
+  cursor: crosshair;
+}
+.voxel-toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+.voxel-panel p {
+  font-size: 13px;
+  padding: 0 12px 10px;
+  color: #cbd5cf;
+}
+.voxel-panel:fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.voxel-panel:fullscreen canvas {
+  max-height: calc(100vh - 130px);
+}
+.voxel-project {
+  margin: 12px;
+  padding: 14px;
+  border: 1px solid #426663;
+  border-radius: 10px;
+  background: #193333;
+}
+.voxel-project[hidden],
+.voxel-project-design[hidden] {
+  display: none;
+}
+.voxel-project [data-project-status] {
+  margin-left: 12px;
+  color: #a7d7c1;
+}
+.voxel-project p {
+  padding: 0;
+  line-height: 1.6;
+}
+.voxel-project-design {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.voxel-project canvas[data-blueprint] {
+  width: 180px;
+  height: 180px;
+  cursor: default;
+}
+.voxel-project progress {
+  width: 100%;
+  margin-top: 12px;
+  accent-color: #8bc8a4;
+}
+.voxel-panel:fullscreen .voxel-project {
+  max-height: 30vh;
+  overflow: auto;
+}

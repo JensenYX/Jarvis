@@ -1,0 +1,122 @@
+runtime:
+  max_active_workers: 3
+  max_queued_tasks: 6
+  hold_deadline_ms: 11000
+  pending_audio_budget_ms: 3500
+  response_timeout_s: 45
+  delivery_max_attempts: 2
+  delivery_retry_s: 1
+  result_ready_hint_s: 12
+  database: memory.sqlite3
+  playback_control_v2: true
+  playback_control_v3: true
+  no_audible_result_retry: true
+  singular_result_recall: true
+  task_dialogue: true
+  task_interaction_v2: true
+  conversation_v3: true
+  intentional_delivery_interruptions: true
+  targeted_task_recall: true
+  task_orchestration: true
+  reversible_interruptions: true
+  batch_requests: true
+  max_context_tasks: 12
+  conversational_delivery: true
+  result_pause_ms: 350
+  result_chain_pause_ms: 180
+jev:
+  keepalive_s: 60
+  prewarm_connection: true
+  total_deadline_ms: 2500
+  fallback_deadline_ms: 8000
+  max_retries: 0
+  route_accept: 0.8
+  control_accept: 0.8
+  max_context_tokens: 6000
+  task_match_probability: 0.8
+  interactive_routing: true
+  warmup_deadline_ms: 5000
+  delegated_deadline_ms: 3500
+prefix:
+  enabled: false
+worker:
+  base_url: https://api.deepseek.com/v1
+  model: deepseek-flash
+  api_key_env: WORKER_API_KEY
+  max_tool_rounds: 12
+  max_tokens: 16384
+  task_timeout_s: 120
+  first_progress_after_s: 12
+  progress_cooldown_s: 12
+  raw_speech_relevance: true
+  send_reasoning_effort: false
+  request_options: {}
+tools:
+  mode: live
+  documents: null
+  web_search_provider: bing_rss
+  task_artifacts: true
+  news_provider: google_news_rss
+  weather_provider: open_meteo
+  artifacts_enabled: true
+  artifact_directory: artifacts
+memory:
+  enabled: true
+  candidate_k: 12
+  selected_k: 3
+  max_expansions: 1
+  task_journal: true
+  profile_context: true
+venus:
+  input_sample_rate: 16000
+  output_sample_rate: 24000
+  chunk_ms: 1000
+  max_new_tokens_per_chunk: 20
+  temperature: 0.7
+  batch_system_prefill: true
+  fast_asr_context: true
+  tts_drain_units: true
+  verbatim_backend: true
+  incremental_tts: true
+asr:
+  chunk_size_sec: 2.0
+  vad_silence_ms: 1100
+  vad_threshold: 0.3
+  pre_roll_ms: 512
+speech_check:
+  enabled: false
+context:
+  recent_turns: 12
+  max_skill_cards: 5
+  max_examples: 0
+  max_context_tokens: 6000
+mode: audio
+frontend: venus
+endpoints:
+  venus: ws://127.0.0.1:8766/ws
+  asr: ws://127.0.0.1:8767/ws
+server:
+  host: 127.0.0.1
+  port: 8765
+native_routing:
+  enabled: true
+  asr_observer: true
+  binding_timeout_s: 20
+  independent_memory: true
+  resolve_delegated_fast: true
+  delegated_continuity: true
+  pending_context: true
+  conversation_history_turns: 32
+  generation_options:
+    allow_native_interrupt: true
+    protocol_grammar: true
+    marker_only: true
+    clean_speech: true
+    verify_speech: false
+    max_new_tokens: 96
+screen:
+  enabled: false
+game_expansion:
+  enabled: false
+voxel:
+  enabled: false

@@ -1,0 +1,5 @@
+id: document_lookup
+description: Find facts in the available document corpus and cite their sources.
+when_to_use: [document lookup, project documentation, source-backed facts]
+not_for: [simple conversation, unavailable internet search]
+tools: [search_documents]

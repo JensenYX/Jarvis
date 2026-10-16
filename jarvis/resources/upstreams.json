@@ -1,0 +1,6 @@
+{
+  "voicechat": {
+    "repo": "https://github.com/NVIDIA-NeMo/Speech.git",
+    "revision": "097dfe9e2f55baf653b83035868bdc89849f1b47"
+  }
+}

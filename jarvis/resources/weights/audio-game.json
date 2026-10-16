@@ -1,0 +1,12 @@
+{
+  "base_model": "venus",
+  "rank": 8,
+  "alpha": 16,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "parameters": 6193152,
+  "sha256": "5df1b84c0c79543af539c21ca318dfe153589d63ac2a0a5ead77ad3e9f8598f4"
+}

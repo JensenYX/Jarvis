@@ -1,0 +1,51 @@
+--- a/mods/ENTITIES/mcl_minecarts/carts.lua
++++ b/mods/ENTITIES/mcl_minecarts/carts.lua
+@@ -187,6 +187,21 @@
+ 	self._seq = data.seq or 1
+ 
+ 	local cd = get_cart_data(data.uuid)
++
++
++
++	if cd and cd.seq and self._seq < cd.seq then
++		self._removed = true
++		self._staticdata = cd
++		core.after(0, function()
++			if not self.object:get_pos() then return end
++			self._inv = nil
++			self._inv_id = nil
++			self._items = nil
++			self.object:remove()
++		end)
++		return
++	end
+ 	if not cd then
+ 		update_cart_data(data)
+ 	else
+@@ -283,6 +298,7 @@
+ 	staticdata.controls = controls
+ end
+ function DEFAULT_CART_DEF:on_step(dtime)
++	if self._removed then return end
+ 	local staticdata = self._staticdata
+ 	if not staticdata then
+ 		staticdata = make_staticdata()
+@@ -565,6 +581,10 @@
+ local function respawn_cart(cart)
+ 	local cart_type = cart.cart_type or "mcl_minecarts:minecart"
+ 	local pos = mod.get_cart_position(cart)
++
++
++
++	if not pos or not core.compare_block_status(pos, "active") then return end
+ 
+ 	local players = minetest.get_connected_players()
+ 	local distance = nil
+@@ -583,6 +603,7 @@
+ 	-- Create the new entity and refresh caches
+ 	local sd = minetest.serialize({ uuid=cart.uuid, seq=cart.seq })
+ 	local entity = minetest.add_entity(pos, cart_type, sd)
++	if not entity then return end
+ 	local le = entity:get_luaentity()
+ 	le._staticdata = cart
+ 	mcl_util.assign_uuid(entity)

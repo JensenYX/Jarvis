@@ -1,0 +1,1 @@
+Select only candidate evidence that helps the current request for this same user. Reject irrelevant or superseded facts. A temporary instruction is not a permanent preference. Mark a conflicting candidate CONFLICT. If evidence is insufficient choose INSUFFICIENT rather than inventing a fact.

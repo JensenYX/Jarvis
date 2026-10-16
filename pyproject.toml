@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-harness"
+version = "0.1.0"
+description = "Coordination for full-duplex audio and omni agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE", "licenses/*.txt", "licenses/*.md"]
+authors = [{name = "Jarvis Team"}]
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn[standard]>=0.34,<1", "httpx>=0.28,<1",
+  "pydantic>=2.12,<3", "PyYAML>=6,<7", "python-dotenv>=1,<2",
+  "numpy>=1.26,<3", "soundfile>=0.12,<1", "scipy>=1.14,<2",
+  "Pillow>=10,<13", "websockets>=15,<17", "typesafe-sdk==0.7.0",
+  "httpx2>=2.0,<3", "huggingface-hub>=0.30,<2", "pypinyin>=0.55,<1"
+]
+
+[project.scripts]
+jarvis = "jarvis.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["jarvis*"]
+namespaces = false
+
+[tool.setuptools.package-data]
+jarvis = ["resources/**/*"]
+
+[tool.setuptools.exclude-package-data]
+"*" = ["*.pyc", "*.pyo", "__pycache__/*"]

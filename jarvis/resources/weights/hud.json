@@ -1,0 +1,13 @@
+{
+  "base_model": "jev-omni",
+  "rank": 8,
+  "alpha": 16,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "parameters": 8503296,
+  "sha256": "8e80b2f31a16dd16cc224716290f853d242b5153768ccec185d9ff6db71cdf8a",
+  "method": "native_choice_visual_fact_SFT_decoder_LoRA"
+}

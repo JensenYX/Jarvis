@@ -1,0 +1,57 @@
+--- a/src/client/game.cpp
++++ b/src/client/game.cpp
+@@ -507,6 +507,12 @@
+ #endif
+ 
+ 	auto framemarker = FrameMarker("Game::run()-frame").started();
++
++
++	float companion_timer = 0.0f;
++	bool companion_last_menu = true;
++	bool companion_last_focus = false;
++	u64 companion_seq = 0;
+ 
+ 	while (m_rendering_engine->run()
+ 			&& !(*kill || g_gamecallback->shutdown_requested
+@@ -577,6 +583,20 @@
+ 			);
+ 		}
+ 		updatePlayerControl(cam_view);
++		if (g_settings->exists("jev_bridge_telemetry") && g_settings->getBool("jev_bridge_telemetry")) {
++			const bool menu = isMenuActive() || guienv->hasFocus(gui_chat_console.get());
++			const bool focused = device->isWindowFocused();
++			companion_timer += dtime;
++			if (menu != companion_last_menu || focused != companion_last_focus || companion_timer >= 0.1f) {
++				client->joinModChannel("jev_bridge:client");
++				std::ostringstream msg;
++				msg << ++companion_seq << ":" << menu << ":" << focused << ":" << (dtime * 1000.0f);
++				client->sendModChannelMessage("jev_bridge:client", msg.str());
++				companion_timer = 0.0f;
++				companion_last_menu = menu;
++				companion_last_focus = focused;
++			}
++		}
+ 
+ 		updatePauseState();
+ 		if (m_is_paused)
+--- a/src/network/clientpackethandler.cpp
++++ b/src/network/clientpackethandler.cpp
+@@ -1780,7 +1780,8 @@
+ 		return;
+ 	}
+ 
+-	m_script->on_modchannel_message(channel_name, sender, channel_msg);
++	if (m_script)
++		m_script->on_modchannel_message(channel_name, sender, channel_msg);
+ }
+ 
+ void Client::handleCommand_ModChannelSignal(NetworkPacket *pkt)
+@@ -1849,7 +1850,7 @@
+ 	}
+ 
+ 	// If signal is valid, forward it to client side mods
+-	if (valid_signal)
++	if (valid_signal && m_script)
+ 		m_script->on_modchannel_signal(channel, signal);
+ }
+ 

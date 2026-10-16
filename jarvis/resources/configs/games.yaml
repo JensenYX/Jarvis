@@ -1,0 +1,31 @@
+game_expansion:
+  enabled: true
+  max_active_games: 1
+  default_game: pvz_web
+  asr_context: 游戏陪玩与日常聊天。植物大战僵尸、阳光、向日葵、VoxeLibre、背包、合成、建造。按实际听到的语音转录。
+  require_guarded_control: true
+  pvz_route: pvz_web
+  pvz_web_root: local_games/pvz_web
+  pvz_web_license_confirmed: true
+  usage_scope: personal_noncommercial
+  heartbeat_timeout_s: 3
+  request_timeout_s: 3
+  max_origin_age_s: 3
+  candidate_limit: 64
+  proactive_cooldown_s: 15
+  worker_timeout_s: 20
+  worker_tool_rounds: 3
+  continuous_autoplay: true
+voxel:
+  enabled: false
+  cooperative_build: true
+  survival_tasks: true
+  display: :91
+  grant_ttl_s: 5
+  snapshot_max_age_ms: 1500
+  proactive_cooldown_s: 20
+  recover_client: true
+  response_deadline_s: 5
+  planning_deadline_s: 12
+  separate_execution_intent: true
+  browser_view: true

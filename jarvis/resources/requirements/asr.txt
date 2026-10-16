@@ -1,0 +1,11 @@
+qwen-asr[vllm]==0.0.6
+silero-vad==6.2.0
+numpy>=1.26,<3
+soundfile>=0.12,<1
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+pydantic>=2.12,<3
+PyYAML>=6,<7
+python-dotenv>=1,<2
+httpx>=0.28,<1
+websockets>=15,<17

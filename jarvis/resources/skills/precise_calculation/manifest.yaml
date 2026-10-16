@@ -1,0 +1,8 @@
+id: precise_calculation
+description: Compute reliable numeric answers with units and tool evidence.
+when_to_use: [exact arithmetic, price comparison, unit conversion]
+not_for: [greeting, explaining a mathematical concept]
+tools: [calculate]
+examples:
+  - request: Compare two annual subscription costs and their difference.
+    expected_route: WORKER

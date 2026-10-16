@@ -1,0 +1,1 @@
+Use only same-user memories with sources. Prefer explicit current instructions over older preferences. Distinguish one-time instructions from durable preferences. If no evidence supports the requested personal fact, say so or ask one focused question.

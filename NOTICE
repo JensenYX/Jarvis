@@ -1,0 +1,12 @@
+Jarvis
+Copyright 2026 Jarvis Team
+
+Original Python harness code, browser client code and released adapter weights
+are provided under the Apache License, Version 2.0.
+
+The VoxeLibre Lua bridge in jarvis/resources/games/mods/jev_bridge is provided
+under GPL-3.0-or-later. Patches to Luanti retain LGPL-2.1-or-later; the VoxeLibre
+patch retains GPL-3.0-or-later. See licenses/THIRD_PARTY.md.
+
+Model code and game engines downloaded by the setup commands retain their
+upstream licenses and notices.

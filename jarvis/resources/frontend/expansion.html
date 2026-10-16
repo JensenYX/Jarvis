@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Jarvis · Games</title>
+    <link rel="stylesheet" href="/static/expansion.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <span class="eyebrow">游戏陪伴</span>
+        <h1>一起看局势，一起做决定。</h1>
+      </div>
+      <a href="/">Jarvis</a>
+    </header>
+    <nav>
+      <label
+        >当前游戏
+        <select id="gameChoice">
+          <option value="pvz_web">植物大战僵尸 · 网页同人版</option>
+        </select></label
+      ><button id="selectGame">切换游戏</button
+      ><button id="startTutorial">新手关卡</button
+      ><button id="startLawn">五路草坪</button
+      ><label id="gameVolumeControl"
+        >游戏音量
+        <input
+          id="gameVolume"
+          type="range"
+          min="0"
+          max="100"
+          value="20"
+          aria-label="游戏音量"
+        /><output id="volumeValue">20%</output></label
+      ><span id="gameStatus">开启语音或先玩游戏</span>
+    </nav>
+    <section class="voice">
+      <button id="connect">开启语音陪玩</button
+      ><button id="textConnect">先玩游戏</button
+      ><button id="stop" disabled>停止说话</button
+      ><button id="disconnect" disabled>结束对话</button
+      ><label
+        >语言
+        <select id="language">
+          <option value="auto">自动</option>
+          <option value="zh">中文</option>
+          <option value="en">English</option>
+        </select></label
+      ><span id="status">未连接</span>
+    </section>
+    <main>
+      <section class="game">
+        <iframe
+          id="gameFrame"
+          title="植物大战僵尸网页同人版"
+          allow="autoplay; microphone 'none'; camera 'none'"
+          src="about:blank"
+        ></iframe>
+      </section>
+      <aside>
+        <h2>一起商量</h2>
+        <p id="advice">
+          从游戏里的 Adventure 开始就能边玩边聊，也可以点上方关卡按钮。
+        </p>
+        <p id="stageHint" aria-live="polite"></p>
+        <div class="actions">
+          <button id="askAdvice" disabled>给个建议</button
+          ><button id="autoplay" disabled>帮我代打</button
+          ><button id="playOnce" disabled>这一步你来</button
+          ><button id="reclaim" disabled>我来</button
+          ><button id="cancelAnalysis" disabled>取消分析</button>
+        </div>
+        <label
+          ><input id="proactive" type="checkbox" checked />偶尔提醒我</label
+        >
+        <p id="gameControl" aria-live="polite">手动操作</p>
+        <p id="lastAction"></p>
+        <div id="transcript" aria-live="polite">
+          开启麦克风后，可以边玩边聊。
+        </div>
+        <details>
+          <summary>游戏状态</summary>
+          <pre id="gameState">尚未连接</pre>
+        </details>
+      </aside>
+    </main>
+    <section id="results"></section>
+    <details>
+      <summary>发送文字消息</summary>
+      <form id="textForm">
+        <input id="textInput" placeholder="我现在有多少阳光？" /><button>
+          发送
+        </button>
+      </form>
+    </details>
+    <details>
+      <summary>反馈这次对话</summary>
+      <textarea id="feedback"></textarea
+      ><button id="sendFeedback">保存反馈</button
+      ><small id="feedbackStatus"></small>
+    </details>
+    <details>
+      <summary>调试信息</summary>
+      <pre id="debug"></pre>
+    </details>
+    <footer>
+      Jarvis · <a href="/games/pvz_web/LICENSE.md">PvZ source license</a>
+    </footer>
+    <script type="module" src="/static/expansion.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #21352f;
+  background: #f2f4ed;
+  color-scheme: light;
+}
+body {
+  margin: 0 auto;
+  max-width: 1500px;
+  padding: 28px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 8px 0 24px;
+}
+.eyebrow {
+  color: #647969;
+  letter-spacing: 2px;
+}
+a {
+  color: #386757;
+}
+nav,
+.voice {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+button,
+select {
+  font: inherit;
+  padding: 10px 15px;
+  border: 1px solid #c7d4c6;
+  border-radius: 9px;
+  background: #fff;
+  color: #21352f;
+}
+button {
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+#connect,
+#playOnce {
+  background: #356751;
+  color: #fff;
+}
+#stop {
+  background: #855d3f;
+  color: #fff;
+}
+main {
+  display: grid;
+  grid-template-columns: minmax(640px, 1fr) 330px;
+  gap: 24px;
+}
+iframe {
+  width: 100%;
+  height: 700px;
+  border: 0;
+  background: #dae4d2;
+  border-radius: 15px;
+}
+aside {
+  padding: 22px;
+  background: #fff;
+  border-radius: 15px;
+}
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+#advice {
+  font-size: 20px;
+  line-height: 1.65;
+}
+#transcript {
+  margin-top: 20px;
+  line-height: 1.7;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-height: 360px;
+  overflow: auto;
+  padding: 12px;
+  background: #e8eee6;
+}
+summary {
+  cursor: pointer;
+  margin: 20px 0;
+}
+textarea {
+  width: 90%;
+  min-height: 65px;
+}
+footer {
+  margin-top: 28px;
+  font-size: 13px;
+  color: #647969;
+}
+#gameControl,
+#gameStatus,
+#status {
+  font-size: 14px;
+  color: #5c7367;
+}
+@media (max-width: 1000px) {
+  body {
+    padding: 16px;
+  }
+  main {
+    display: block;
+  }
+  aside {
+    margin-top: 16px;
+  }
+  iframe {
+    height: 630px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}

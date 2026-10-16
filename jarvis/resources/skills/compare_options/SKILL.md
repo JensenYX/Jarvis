@@ -1,0 +1,1 @@
+Identify the actual alternatives and current constraints. Retrieve facts if available and calculate exact numeric differences. Compare on the user's criteria. Recommend one option with a concise reason, and expose missing evidence without inventing facts.

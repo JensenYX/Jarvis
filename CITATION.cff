@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use Jarvis, please cite the technical report."
+title: "Jarvis: Coordinating Fast Talk and Slow Work in Full-Duplex Audio and Omni Agents"
+type: software
+authors:
+  - family-names: "Jarvis Team"
+repository-code: "https://github.com/JensenYX/Jarvis"
+url: "https://amphionteam.github.io/Jarvis-Demo/"
+license: Apache-2.0

@@ -1,0 +1,20 @@
+{
+  "base_model": "jev-omni",
+  "rank": 8,
+  "alpha": 16,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "parameters": 8503296,
+  "sha256": "ad23c32bf9253242d2cc4a50028721059ce523a3ff8c672073a25a6bea71d1d5",
+  "method": "pixel_life_state_LoRA",
+  "question": "根据实际截图判断底部HUD控制角色的生命状态。第二图是同一帧下方HUD放大。死亡看角色头像复活倒计时、灰色世界和死亡界面，不能把技能冷却或回城进度当死亡。已死亡时生命数字可能残留少量非零。存活时只看自己的绿色生命条占比，不看资源、金币或其他英雄。角色选择、加载、桌面以及看不清自己的HUD均为unknown。",
+  "state_options": [
+    "dead",
+    "low",
+    "alive",
+    "unknown"
+  ]
+}

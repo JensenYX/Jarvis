@@ -1,0 +1,9 @@
+include README.md README_zh.md LICENSE NOTICE CITATION.cff .env.example
+recursive-include docs *.md *.svg *.jpg
+recursive-include examples *.py *.yaml
+recursive-include licenses *.txt *.md
+recursive-include jarvis/resources *
+global-exclude *.pyc *.pyo
+prune tests
+prune runs
+prune reports

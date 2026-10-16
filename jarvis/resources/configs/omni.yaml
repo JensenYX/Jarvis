@@ -1,0 +1,148 @@
+screen:
+  enabled: true
+  observation_track: screen_only
+  companion_only: true
+  game: cs2
+  instant_alerts_enabled: false
+  extractor_endpoint: http://127.0.0.1:8811
+  proactive_enabled: true
+  background_interval_ms: 1500
+  perception_deadline_ms: 2200
+  route_deadline_ms: 2500
+  recent_user_context:
+    max_turns: 32
+    max_chars: 8192
+  personal_memory_queue:
+    enabled: true
+    concurrency: 2
+    max_attempts: 4
+    attempt_timeout_s: 30
+    retry_base_s: 5
+    retry_max_s: 60
+    pending_ttl_s: 3600
+    max_pending_per_user: 64
+    max_pending_total: 4096
+    receipt_limit: 4096
+  coaching:
+    enabled: true
+    worker_deadline_ms: 20000
+    max_snapshot_age_ms: 30000
+    patches: {}
+  claim_max_age_ms:
+    scene: 8000
+    hud: 3000
+    screen_position: 1000
+    past_event: 30000
+  session_overrides:
+    speech_check:
+      enabled: false
+  audio_endpoints:
+    venus: ws://127.0.0.1:8766/ws
+    asr: ws://127.0.0.1:8767/ws
+  capture:
+    recording_fps: 30
+    inference_fps: 2
+    ring_seconds: 60
+    max_image_bytes: 4000000
+    max_frame_pixels: 2073600
+    max_pending_frames: 1
+    max_media_bytes: 64000000
+  decisions:
+    backend: jev_omni
+    endpoint: http://127.0.0.1:8810
+    include_images: true
+    background_inflight: 1
+    user_inflight: 1
+    deadline_ms: 2500
+    user_deadline_ms: 4000
+  native_fast:
+    enabled: true
+    policy: native-route-task-boundary.json
+  route_backend:
+    backend: official_text_jev
+  visual_window:
+    frames: 2
+    duration_ms: 1400
+  visual_review:
+    enabled: true
+    policy: visual-review.txt
+    max_tokens: 512
+    deadline_ms: 22000
+    user_deadline_ms: 8000
+    total_budget_ms: 28000
+    route_enabled: true
+    route_deadline_ms: 8000
+    route_total_budget_ms: 10000
+  extractor_cancellable_requests: true
+  outcome_renderer:
+    enabled: true
+    deadline_ms: 3000
+    historical_snapshot_reply: true
+    conversation_choices: true
+    historical_snapshot_min_delivery_ms: 0
+    reply_format: plain_text
+  speaker_identity_context: true
+  worker_task_status_context:
+    enabled: true
+    max_tasks: 12
+  batch_read_context:
+    enabled: true
+    direct_control_resolution: true
+  pending_requests:
+    enabled: true
+    existing_operations: true
+    max_pending: 8
+    max_age_s: 90
+    review_timeout_s: 8
+  conversational_uncertainty:
+    enabled: true
+    reviewed_outcome: false
+  native_routing:
+    enabled: true
+    threshold: 0.8
+    frame_stride: 3
+    max_tokens: 4096
+    binding_timeout_s: 20
+    independent_memory: false
+    resolve_delegated_fast: true
+    prior_context: true
+    adapter: default
+    continuous_decision_context: false
+    speech_audio_source: microphone
+    speech_text_end: true
+    proactive: false
+    pending_delivery_context: true
+    scene_admission: jev
+  native_memory_evidence: true
+  background_retrospective: false
+  tactical_reply:
+    enabled: true
+    provider: jev_choice
+    concise_social: false
+    review_mode: gate
+    deadline_ms: 1400
+    max_start_age_ms: 3500
+    max_revisions: 0
+    prefetch: false
+    choice_timeout_s: 0.8
+    choice_min_probability: 0.5
+    choice_hierarchy: true
+    choice_visual_prefilter: true
+    choice_intent_first: true
+    choice_contextual_wording: true
+    intent_endpoint: http://127.0.0.1:8811
+  speech_audio_source: microphone
+  speech_text_end: true
+  speech_batch_approved: false
+  speech_immediate_approved: false
+  speech_first_chunk_tokens: 25
+  speech_chunk_tokens: 25
+  speech_trim_zero_prefix_ms: 0
+  speech_decision_reservation_ms: 0
+  scene_dialogue:
+    enabled: true
+    max_new_tokens: 160
+    proactive_cooldown_ms: 10000
+    short_visual_output: true
+  observation_contract: true
+  speech_immediate_native: false

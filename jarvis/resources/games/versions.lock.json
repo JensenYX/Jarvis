@@ -1,0 +1,16 @@
+{
+  "luanti": {
+    "version": "5.17.0",
+    "commit": "8b8b28614b3c9fed12da9c81b4e2f1cf0db42b9c",
+    "archive_sha256": "88a8800ac6d0b0fb2eb36badda0c5cdeca42082c497f704f741d4a4951e0f76a",
+    "archive_url": "https://codeload.github.com/luanti-org/luanti/tar.gz/8b8b28614b3c9fed12da9c81b4e2f1cf0db42b9c"
+  },
+  "voxelibre": {
+    "version": "0.92.3",
+    "commit": "a523240fb89713ffa6302696e8275bbd7de3bd49",
+    "contentdb_release": 38585,
+    "minimum_engine": "5.10",
+    "archive_sha256": "82167a609820d64f936e70d46acf715e347a787444e21b0ecb87c5c5cfdf34e0",
+    "archive_url": "https://codeload.github.com/VoxeLibre/VoxeLibre/tar.gz/a523240fb89713ffa6302696e8275bbd7de3bd49"
+  }
+}

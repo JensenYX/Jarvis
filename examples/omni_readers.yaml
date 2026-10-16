@@ -1,0 +1,9 @@
+mode: omni
+screen:
+  scene_dialogue:
+    fact_reader:
+      enabled: true
+      endpoint: http://127.0.0.1:8812
+  life_state:
+    enabled: true
+    endpoint: http://127.0.0.1:8813

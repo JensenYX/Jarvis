@@ -1,0 +1,961 @@
+{
+  "questions": {
+    "champion": {
+      "instructions": "从当前游戏截图辨认底部玩家HUD所控制的英雄。综合头像、技能图标和英雄外观，选择真实英雄身份。不要把选中目标面板或队友头像当自己；不可辨认时选择unknown。没有预设玩家英雄。",
+      "options": [
+        {
+          "id": "Aatrox",
+          "text": "Aatrox 暗裔剑魔"
+        },
+        {
+          "id": "Ahri",
+          "text": "Ahri 九尾妖狐"
+        },
+        {
+          "id": "Akali",
+          "text": "Akali 离群之刺"
+        },
+        {
+          "id": "Akshan",
+          "text": "Akshan 影哨"
+        },
+        {
+          "id": "Alistar",
+          "text": "Alistar 牛头酋长"
+        },
+        {
+          "id": "Ambessa",
+          "text": "Ambessa 铁血狼母"
+        },
+        {
+          "id": "Amumu",
+          "text": "Amumu 殇之木乃伊"
+        },
+        {
+          "id": "Anivia",
+          "text": "Anivia 冰晶凤凰"
+        },
+        {
+          "id": "Annie",
+          "text": "Annie 黑暗之女"
+        },
+        {
+          "id": "Aphelios",
+          "text": "Aphelios 残月之肃"
+        },
+        {
+          "id": "Ashe",
+          "text": "Ashe 寒冰射手"
+        },
+        {
+          "id": "AurelionSol",
+          "text": "AurelionSol 铸星龙王"
+        },
+        {
+          "id": "Aurora",
+          "text": "Aurora 双界灵兔"
+        },
+        {
+          "id": "Azir",
+          "text": "Azir 沙漠皇帝"
+        },
+        {
+          "id": "Bard",
+          "text": "Bard 星界游神"
+        },
+        {
+          "id": "Belveth",
+          "text": "Belveth 虚空女皇"
+        },
+        {
+          "id": "Blitzcrank",
+          "text": "Blitzcrank 蒸汽机器人"
+        },
+        {
+          "id": "Brand",
+          "text": "Brand 复仇焰魂"
+        },
+        {
+          "id": "Braum",
+          "text": "Braum 弗雷尔卓德之心"
+        },
+        {
+          "id": "Briar",
+          "text": "Briar 狂厄蔷薇"
+        },
+        {
+          "id": "Caitlyn",
+          "text": "Caitlyn 皮城女警"
+        },
+        {
+          "id": "Camille",
+          "text": "Camille 青钢影"
+        },
+        {
+          "id": "Cassiopeia",
+          "text": "Cassiopeia 魔蛇之拥"
+        },
+        {
+          "id": "Chogath",
+          "text": "Chogath 虚空恐惧"
+        },
+        {
+          "id": "Corki",
+          "text": "Corki 英勇投弹手"
+        },
+        {
+          "id": "Darius",
+          "text": "Darius 诺克萨斯之手"
+        },
+        {
+          "id": "Diana",
+          "text": "Diana 皎月女神"
+        },
+        {
+          "id": "Draven",
+          "text": "Draven 荣耀行刑官"
+        },
+        {
+          "id": "DrMundo",
+          "text": "DrMundo 祖安狂人"
+        },
+        {
+          "id": "Ekko",
+          "text": "Ekko 时间刺客"
+        },
+        {
+          "id": "Elise",
+          "text": "Elise 蜘蛛女皇"
+        },
+        {
+          "id": "Evelynn",
+          "text": "Evelynn 痛苦之拥"
+        },
+        {
+          "id": "Ezreal",
+          "text": "Ezreal 探险家"
+        },
+        {
+          "id": "Fiddlesticks",
+          "text": "Fiddlesticks 远古恐惧"
+        },
+        {
+          "id": "Fiora",
+          "text": "Fiora 无双剑姬"
+        },
+        {
+          "id": "Fizz",
+          "text": "Fizz 潮汐海灵"
+        },
+        {
+          "id": "Galio",
+          "text": "Galio 正义巨像"
+        },
+        {
+          "id": "Gangplank",
+          "text": "Gangplank 海洋之灾"
+        },
+        {
+          "id": "Garen",
+          "text": "Garen 德玛西亚之力"
+        },
+        {
+          "id": "Gnar",
+          "text": "Gnar 迷失之牙"
+        },
+        {
+          "id": "Gragas",
+          "text": "Gragas 酒桶"
+        },
+        {
+          "id": "Graves",
+          "text": "Graves 法外狂徒"
+        },
+        {
+          "id": "Gwen",
+          "text": "Gwen 灵罗娃娃"
+        },
+        {
+          "id": "Hecarim",
+          "text": "Hecarim 战争之影"
+        },
+        {
+          "id": "Heimerdinger",
+          "text": "Heimerdinger 大发明家"
+        },
+        {
+          "id": "Hwei",
+          "text": "Hwei 异画师"
+        },
+        {
+          "id": "Illaoi",
+          "text": "Illaoi 海兽祭司"
+        },
+        {
+          "id": "Irelia",
+          "text": "Irelia 刀锋舞者"
+        },
+        {
+          "id": "Ivern",
+          "text": "Ivern 翠神"
+        },
+        {
+          "id": "Janna",
+          "text": "Janna 风暴之怒"
+        },
+        {
+          "id": "JarvanIV",
+          "text": "JarvanIV 德玛西亚皇子"
+        },
+        {
+          "id": "Jax",
+          "text": "Jax 武器大师"
+        },
+        {
+          "id": "Jayce",
+          "text": "Jayce 未来守护者"
+        },
+        {
+          "id": "Jhin",
+          "text": "Jhin 戏命师"
+        },
+        {
+          "id": "Jinx",
+          "text": "Jinx 暴走萝莉"
+        },
+        {
+          "id": "Kaisa",
+          "text": "Kaisa 虚空之女"
+        },
+        {
+          "id": "Kalista",
+          "text": "Kalista 复仇之矛"
+        },
+        {
+          "id": "Karma",
+          "text": "Karma 天启者"
+        },
+        {
+          "id": "Karthus",
+          "text": "Karthus 死亡颂唱者"
+        },
+        {
+          "id": "Kassadin",
+          "text": "Kassadin 虚空行者"
+        },
+        {
+          "id": "Katarina",
+          "text": "Katarina 不祥之刃"
+        },
+        {
+          "id": "Kayle",
+          "text": "Kayle 正义天使"
+        },
+        {
+          "id": "Kayn",
+          "text": "Kayn 影流之镰"
+        },
+        {
+          "id": "Kennen",
+          "text": "Kennen 狂暴之心"
+        },
+        {
+          "id": "Khazix",
+          "text": "Khazix 虚空掠夺者"
+        },
+        {
+          "id": "Kindred",
+          "text": "Kindred 永猎双子"
+        },
+        {
+          "id": "Kled",
+          "text": "Kled 暴怒骑士"
+        },
+        {
+          "id": "KogMaw",
+          "text": "KogMaw 深渊巨口"
+        },
+        {
+          "id": "KSante",
+          "text": "KSante 纳祖芒荣耀"
+        },
+        {
+          "id": "Leblanc",
+          "text": "Leblanc 诡术妖姬"
+        },
+        {
+          "id": "LeeSin",
+          "text": "LeeSin 盲僧"
+        },
+        {
+          "id": "Leona",
+          "text": "Leona 曙光女神"
+        },
+        {
+          "id": "Lillia",
+          "text": "Lillia 含羞蓓蕾"
+        },
+        {
+          "id": "Lissandra",
+          "text": "Lissandra 冰霜女巫"
+        },
+        {
+          "id": "Locke",
+          "text": "Locke 灰烬驱魔人"
+        },
+        {
+          "id": "Lucian",
+          "text": "Lucian 圣枪游侠"
+        },
+        {
+          "id": "Lulu",
+          "text": "Lulu 仙灵女巫"
+        },
+        {
+          "id": "Lux",
+          "text": "Lux 光辉女郎"
+        },
+        {
+          "id": "Malphite",
+          "text": "Malphite 熔岩巨兽"
+        },
+        {
+          "id": "Malzahar",
+          "text": "Malzahar 虚空先知"
+        },
+        {
+          "id": "Maokai",
+          "text": "Maokai 扭曲树精"
+        },
+        {
+          "id": "MasterYi",
+          "text": "MasterYi 无极剑圣"
+        },
+        {
+          "id": "Mel",
+          "text": "Mel 流光镜影"
+        },
+        {
+          "id": "Milio",
+          "text": "Milio 明烛"
+        },
+        {
+          "id": "MissFortune",
+          "text": "MissFortune 赏金猎人"
+        },
+        {
+          "id": "MonkeyKing",
+          "text": "MonkeyKing 齐天大圣"
+        },
+        {
+          "id": "Mordekaiser",
+          "text": "Mordekaiser 铁铠冥魂"
+        },
+        {
+          "id": "Morgana",
+          "text": "Morgana 堕落天使"
+        },
+        {
+          "id": "Naafiri",
+          "text": "Naafiri 百裂冥犬"
+        },
+        {
+          "id": "Nami",
+          "text": "Nami 唤潮鲛姬"
+        },
+        {
+          "id": "Nasus",
+          "text": "Nasus 沙漠死神"
+        },
+        {
+          "id": "Nautilus",
+          "text": "Nautilus 深海泰坦"
+        },
+        {
+          "id": "Neeko",
+          "text": "Neeko 万花通灵"
+        },
+        {
+          "id": "Nidalee",
+          "text": "Nidalee 狂野女猎手"
+        },
+        {
+          "id": "Nilah",
+          "text": "Nilah 不羁之悦"
+        },
+        {
+          "id": "Nocturne",
+          "text": "Nocturne 永恒梦魇"
+        },
+        {
+          "id": "Nunu",
+          "text": "Nunu 雪原双子"
+        },
+        {
+          "id": "Olaf",
+          "text": "Olaf 狂战士"
+        },
+        {
+          "id": "Orianna",
+          "text": "Orianna 发条魔灵"
+        },
+        {
+          "id": "Ornn",
+          "text": "Ornn 山隐之焰"
+        },
+        {
+          "id": "Pantheon",
+          "text": "Pantheon 不屈之枪"
+        },
+        {
+          "id": "Poppy",
+          "text": "Poppy 圣锤之毅"
+        },
+        {
+          "id": "Pyke",
+          "text": "Pyke 血港鬼影"
+        },
+        {
+          "id": "Qiyana",
+          "text": "Qiyana 元素女皇"
+        },
+        {
+          "id": "Quinn",
+          "text": "Quinn 德玛西亚之翼"
+        },
+        {
+          "id": "Rakan",
+          "text": "Rakan 幻翎"
+        },
+        {
+          "id": "Rammus",
+          "text": "Rammus 披甲龙龟"
+        },
+        {
+          "id": "RekSai",
+          "text": "RekSai 虚空遁地兽"
+        },
+        {
+          "id": "Rell",
+          "text": "Rell 镕铁少女"
+        },
+        {
+          "id": "Renata",
+          "text": "Renata 炼金男爵"
+        },
+        {
+          "id": "Renekton",
+          "text": "Renekton 荒漠屠夫"
+        },
+        {
+          "id": "Rengar",
+          "text": "Rengar 傲之追猎者"
+        },
+        {
+          "id": "Riven",
+          "text": "Riven 放逐之刃"
+        },
+        {
+          "id": "Rumble",
+          "text": "Rumble 机械公敌"
+        },
+        {
+          "id": "Ryze",
+          "text": "Ryze 符文法师"
+        },
+        {
+          "id": "Samira",
+          "text": "Samira 沙漠玫瑰"
+        },
+        {
+          "id": "Sejuani",
+          "text": "Sejuani 北地之怒"
+        },
+        {
+          "id": "Senna",
+          "text": "Senna 涤魂圣枪"
+        },
+        {
+          "id": "Seraphine",
+          "text": "Seraphine 星籁歌姬"
+        },
+        {
+          "id": "Sett",
+          "text": "Sett 腕豪"
+        },
+        {
+          "id": "Shaco",
+          "text": "Shaco 恶魔小丑"
+        },
+        {
+          "id": "Shen",
+          "text": "Shen 暮光之眼"
+        },
+        {
+          "id": "Shyvana",
+          "text": "Shyvana 龙血武姬"
+        },
+        {
+          "id": "Singed",
+          "text": "Singed 炼金术士"
+        },
+        {
+          "id": "Sion",
+          "text": "Sion 亡灵战神"
+        },
+        {
+          "id": "Sivir",
+          "text": "Sivir 战争女神"
+        },
+        {
+          "id": "Skarner",
+          "text": "Skarner 上古领主"
+        },
+        {
+          "id": "Smolder",
+          "text": "Smolder 炽炎雏龙"
+        },
+        {
+          "id": "Sona",
+          "text": "Sona 琴瑟仙女"
+        },
+        {
+          "id": "Soraka",
+          "text": "Soraka 众星之子"
+        },
+        {
+          "id": "Swain",
+          "text": "Swain 诺克萨斯统领"
+        },
+        {
+          "id": "Sylas",
+          "text": "Sylas 解脱者"
+        },
+        {
+          "id": "Syndra",
+          "text": "Syndra 暗黑元首"
+        },
+        {
+          "id": "TahmKench",
+          "text": "TahmKench 河流之王"
+        },
+        {
+          "id": "Taliyah",
+          "text": "Taliyah 岩雀"
+        },
+        {
+          "id": "Talon",
+          "text": "Talon 刀锋之影"
+        },
+        {
+          "id": "Taric",
+          "text": "Taric 瓦洛兰之盾"
+        },
+        {
+          "id": "Teemo",
+          "text": "Teemo 迅捷斥候"
+        },
+        {
+          "id": "Thresh",
+          "text": "Thresh 魂锁典狱长"
+        },
+        {
+          "id": "Tristana",
+          "text": "Tristana 麦林炮手"
+        },
+        {
+          "id": "Trundle",
+          "text": "Trundle 巨魔之王"
+        },
+        {
+          "id": "Tryndamere",
+          "text": "Tryndamere 蛮族之王"
+        },
+        {
+          "id": "TwistedFate",
+          "text": "TwistedFate 卡牌大师"
+        },
+        {
+          "id": "Twitch",
+          "text": "Twitch 瘟疫之源"
+        },
+        {
+          "id": "Udyr",
+          "text": "Udyr 兽灵行者"
+        },
+        {
+          "id": "Urgot",
+          "text": "Urgot 无畏战车"
+        },
+        {
+          "id": "Varus",
+          "text": "Varus 惩戒之箭"
+        },
+        {
+          "id": "Vayne",
+          "text": "Vayne 暗夜猎手"
+        },
+        {
+          "id": "Veigar",
+          "text": "Veigar 邪恶小法师"
+        },
+        {
+          "id": "Velkoz",
+          "text": "Velkoz 虚空之眼"
+        },
+        {
+          "id": "Vex",
+          "text": "Vex 愁云使者"
+        },
+        {
+          "id": "Vi",
+          "text": "Vi 皮城执法官"
+        },
+        {
+          "id": "Viego",
+          "text": "Viego 破败之王"
+        },
+        {
+          "id": "Viktor",
+          "text": "Viktor 奥术先驱"
+        },
+        {
+          "id": "Vladimir",
+          "text": "Vladimir 猩红收割者"
+        },
+        {
+          "id": "Volibear",
+          "text": "Volibear 不灭狂雷"
+        },
+        {
+          "id": "Warwick",
+          "text": "Warwick 祖安怒兽"
+        },
+        {
+          "id": "Xayah",
+          "text": "Xayah 逆羽"
+        },
+        {
+          "id": "Xerath",
+          "text": "Xerath 远古巫灵"
+        },
+        {
+          "id": "XinZhao",
+          "text": "XinZhao 德邦总管"
+        },
+        {
+          "id": "Yasuo",
+          "text": "Yasuo 疾风剑豪"
+        },
+        {
+          "id": "Yone",
+          "text": "Yone 封魔剑魂"
+        },
+        {
+          "id": "Yorick",
+          "text": "Yorick 牧魂人"
+        },
+        {
+          "id": "Yunara",
+          "text": "Yunara 不破之誓"
+        },
+        {
+          "id": "Yuumi",
+          "text": "Yuumi 魔法猫咪"
+        },
+        {
+          "id": "Zaahen",
+          "text": "Zaahen 不落魔锋"
+        },
+        {
+          "id": "Zac",
+          "text": "Zac 生化魔人"
+        },
+        {
+          "id": "Zed",
+          "text": "Zed 影流之主"
+        },
+        {
+          "id": "Zeri",
+          "text": "Zeri 祖安花火"
+        },
+        {
+          "id": "Ziggs",
+          "text": "Ziggs 爆破鬼才"
+        },
+        {
+          "id": "Zilean",
+          "text": "Zilean 时光守护者"
+        },
+        {
+          "id": "Zoe",
+          "text": "Zoe 暮光星灵"
+        },
+        {
+          "id": "Zyra",
+          "text": "Zyra 荆棘之兴"
+        },
+        {
+          "id": "unknown",
+          "text": "无法从画面可靠辨认"
+        }
+      ]
+    },
+    "weapon": {
+      "instructions": "辨认第一人称角色此刻实际拿在手里的武器；不是商店、背包或击杀消息里的武器。刀的类型看不清时选other knife；连大类也看不清时选unknown。",
+      "options": [
+        {
+          "id": "w0",
+          "text": "AK-47"
+        },
+        {
+          "id": "w1",
+          "text": "M4A4"
+        },
+        {
+          "id": "w2",
+          "text": "M4A1-S"
+        },
+        {
+          "id": "w3",
+          "text": "AWP"
+        },
+        {
+          "id": "w4",
+          "text": "SSG 08"
+        },
+        {
+          "id": "w5",
+          "text": "AUG"
+        },
+        {
+          "id": "w6",
+          "text": "SG 553"
+        },
+        {
+          "id": "w7",
+          "text": "Galil AR"
+        },
+        {
+          "id": "w8",
+          "text": "FAMAS"
+        },
+        {
+          "id": "w9",
+          "text": "Glock-18"
+        },
+        {
+          "id": "w10",
+          "text": "USP-S"
+        },
+        {
+          "id": "w11",
+          "text": "P2000"
+        },
+        {
+          "id": "w12",
+          "text": "P250"
+        },
+        {
+          "id": "w13",
+          "text": "Desert Eagle"
+        },
+        {
+          "id": "w14",
+          "text": "Five-SeveN"
+        },
+        {
+          "id": "w15",
+          "text": "Tec-9"
+        },
+        {
+          "id": "w16",
+          "text": "CZ75-Auto"
+        },
+        {
+          "id": "w17",
+          "text": "Dual Berettas"
+        },
+        {
+          "id": "w18",
+          "text": "R8 Revolver"
+        },
+        {
+          "id": "w19",
+          "text": "MP9"
+        },
+        {
+          "id": "w20",
+          "text": "MAC-10"
+        },
+        {
+          "id": "w21",
+          "text": "MP7"
+        },
+        {
+          "id": "w22",
+          "text": "MP5-SD"
+        },
+        {
+          "id": "w23",
+          "text": "UMP-45"
+        },
+        {
+          "id": "w24",
+          "text": "P90"
+        },
+        {
+          "id": "w25",
+          "text": "PP-Bizon"
+        },
+        {
+          "id": "w26",
+          "text": "Nova"
+        },
+        {
+          "id": "w27",
+          "text": "XM1014"
+        },
+        {
+          "id": "w28",
+          "text": "MAG-7"
+        },
+        {
+          "id": "w29",
+          "text": "Sawed-Off"
+        },
+        {
+          "id": "w30",
+          "text": "M249"
+        },
+        {
+          "id": "w31",
+          "text": "Negev"
+        },
+        {
+          "id": "w32",
+          "text": "G3SG1"
+        },
+        {
+          "id": "w33",
+          "text": "SCAR-20"
+        },
+        {
+          "id": "w34",
+          "text": "butterfly knife"
+        },
+        {
+          "id": "w35",
+          "text": "karambit"
+        },
+        {
+          "id": "w36",
+          "text": "bayonet"
+        },
+        {
+          "id": "w37",
+          "text": "other knife"
+        },
+        {
+          "id": "w38",
+          "text": "grenade"
+        },
+        {
+          "id": "w39",
+          "text": "C4"
+        },
+        {
+          "id": "w40",
+          "text": "unknown"
+        }
+      ]
+    },
+    "location": {
+      "instructions": "定位底部玩家HUD所控制的英雄在游戏世界画面里的位置。全屏均分三行三列，选择该英雄脚下中心所在格。不是头像的位置，不是选中目标的位置。不在屏幕内选offscreen，无法辨认选unknown。",
+      "options": [
+        {
+          "id": "top_left",
+          "text": "top_left"
+        },
+        {
+          "id": "top_center",
+          "text": "top_center"
+        },
+        {
+          "id": "top_right",
+          "text": "top_right"
+        },
+        {
+          "id": "middle_left",
+          "text": "middle_left"
+        },
+        {
+          "id": "middle_center",
+          "text": "middle_center"
+        },
+        {
+          "id": "middle_right",
+          "text": "middle_right"
+        },
+        {
+          "id": "bottom_left",
+          "text": "bottom_left"
+        },
+        {
+          "id": "bottom_center",
+          "text": "bottom_center"
+        },
+        {
+          "id": "bottom_right",
+          "text": "bottom_right"
+        },
+        {
+          "id": "offscreen",
+          "text": "offscreen"
+        },
+        {
+          "id": "unknown",
+          "text": "unknown"
+        }
+      ]
+    },
+    "health": {
+      "instructions": "读取底部玩家HUD所控制角色的当前生命占最大生命的比例并分档。不是选中目标的生命，不是法力或护盾。看不清时选unknown。",
+      "options": [
+        {
+          "id": "dead",
+          "text": "生命为零"
+        },
+        {
+          "id": "critical",
+          "text": "生命大于零且不足25%"
+        },
+        {
+          "id": "low",
+          "text": "生命25%至不足50%"
+        },
+        {
+          "id": "healthy",
+          "text": "生命50%至不足85%"
+        },
+        {
+          "id": "full",
+          "text": "生命85%及以上"
+        },
+        {
+          "id": "unknown",
+          "text": "无法读取或判断自己的生命值"
+        }
+      ]
+    }
+  },
+  "image_layout": "完整当前帧；如有第二张图，是同一帧底部HUD的放大图。",
+  "hud_crop": [
+    0.18,
+    0.78,
+    0.78,
+    1
+  ],
+  "hud_scale": 2,
+  "threshold": 0.8
+}

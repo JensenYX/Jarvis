@@ -1,0 +1,29 @@
+--- a/src/client/game.cpp
++++ b/src/client/game.cpp
+@@ -573,11 +573,13 @@
+ 			if (isMenuActive() || !device->isWindowFocused())
+ 				presentation.remaining = 0.0f;
+ 			if (presentation.remaining > 0.0f) {
+-				v3f delta = presentation.target - (camera->getPosition() + intToFloat(camera->getOffset(), BS));
++
++
++				v3f delta = presentation.target - camera->getPosition();
+ 				float yaw = std::atan2(-delta.X, delta.Z) * core::RADTODEG;
+ 				float pitch = presentation.kind == "MOVE" ? 8.0f :
+ 					-std::atan2(delta.Y, std::hypot(delta.X, delta.Z)) * core::RADTODEG;
+-				float turn = std::fmod(yaw - cam_view_target.camera_yaw + 540.0f, 360.0f) - 180.0f;
++				float turn = std::remainder(yaw - cam_view_target.camera_yaw, 360.0f);
+ 				cam_view_target.camera_yaw += std::clamp(turn, -200.0f*dtime, 200.0f*dtime);
+ 				cam_view_target.camera_pitch += std::clamp(pitch-cam_view_target.camera_pitch, -160.0f*dtime, 160.0f*dtime);
+ 			}
+--- a/src/network/clientpackethandler.cpp
++++ b/src/network/clientpackethandler.cpp
+@@ -1795,7 +1795,7 @@
+ 					std::isfinite(x) && std::isfinite(y) && std::isfinite(z) &&
+ 					std::isfinite(progress) && std::abs(x) <= 31000 &&
+ 					std::abs(y) <= 31000 && std::abs(z) <= 31000 && ms >= 0 && ms <= 800 &&
+-					(kind == "STOP" || kind == "MOVE" || kind == "DIG" || kind == "PLACE" || kind == "ATTACK")) {
++					(kind == "STOP" || kind == "MOVE" || kind == "AIM" || kind == "DIG" || kind == "PLACE" || kind == "ATTACK")) {
+ 				companion_presentation.sequence = sequence;
+ 				companion_presentation.kind = kind;
+ 				companion_presentation.target = v3f(x, y, z) * BS;

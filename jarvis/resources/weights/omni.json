@@ -1,0 +1,12 @@
+{
+  "base_model": "venus-omni",
+  "rank": 8,
+  "alpha": 16,
+  "targets": [
+    "q_proj",
+    "v_proj",
+    "o_proj"
+  ],
+  "parameters": 6193152,
+  "sha256": "b5d85274dca1fd9b1475c26a4b7bf9615839b5185dd4296b77f5f4e6ba18d1eb"
+}

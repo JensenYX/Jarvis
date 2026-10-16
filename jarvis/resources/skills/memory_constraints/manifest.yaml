@@ -1,0 +1,5 @@
+id: memory_constraints
+description: Answer using confirmed personal preferences and history.
+when_to_use: [personal constraints, recalling user preferences]
+not_for: [unrelated public facts, unsupported personal guesses]
+tools: [memory_search]

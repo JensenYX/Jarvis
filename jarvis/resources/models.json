@@ -1,0 +1,45 @@
+{
+  "venus": {
+    "repo": "inclusionAI/Realtime-Venus",
+    "revision": "d9c6836e791b6a7aa44ed315cbe99cf661e6a144",
+    "subdirectory": "Realtime-Venus-Audio"
+  },
+  "venus-omni": {
+    "repo": "inclusionAI/Realtime-Venus",
+    "revision": "ad42af5f6c77936377626e016cccb7147b6a723f",
+    "subdirectory": "Realtime-Venus-Omni"
+  },
+  "asr": {
+    "repo": "Qwen/Qwen3-ASR-1.7B",
+    "revision": "7278e1e70fe206f11671096ffdd38061171dd6e5"
+  },
+  "minicpm": {
+    "repo": "openbmb/MiniCPM-o-4_5",
+    "revision": "503e754207c94da6bb26850b4469f367c9ea3582"
+  },
+  "voicechat": {
+    "repo": "nvidia/NVIDIA-NemotronLabs-VoiceChat-11B",
+    "revision": "443794ea956ef0065f001967ffd00e77f519cb39"
+  },
+  "jev-omni": {
+    "repo": "akhilaaa3/Jev-Omni",
+    "revision": "c050d51354147985d13286cf4acf90f562f2c631",
+    "allow_patterns": [
+      "unified/*",
+      "*.json",
+      "*.py",
+      "*.pt",
+      "*.jinja",
+      "requirements.txt",
+      "README.md"
+    ],
+    "source_files": {
+      "load_model.py": "2cd40e2dd7271fcea255e8257e61b80b53e0f28c839a4fb08cd77c928fce2728",
+      "jev_omni.py": "9d212e7c200d78f4a87b5495dcb738290535d15ad69cfe9ae68568139a1c1cce"
+    }
+  },
+  "vision": {
+    "repo": "google/gemma-4-12B-it",
+    "revision": "707f0a3b8a3c7ad586ed01e27eafbad8a27dd0f7"
+  }
+}

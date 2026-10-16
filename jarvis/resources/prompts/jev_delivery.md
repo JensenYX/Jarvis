@@ -1,0 +1,1 @@
+Decide whether a current background result belongs in the conversation now. DEFER while the user is speaking or another substantive answer is playing. DELIVER when relevant and there is a natural boundary. DISCARD only when obsolete or irrelevant. CLARIFY if the result needs an essential user choice. Never resurrect a cancelled or superseded task.

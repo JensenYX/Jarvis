@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>一起看游戏</title>
+    <style>
+      :root {
+        font-family: system-ui, sans-serif;
+        color: #193335;
+        background: #f5f5ef;
+        color-scheme: light;
+      }
+      body {
+        max-width: 1000px;
+        margin: 4vh auto;
+        padding: 24px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      p {
+        line-height: 1.7;
+        color: #456061;
+      }
+      button,
+      select {
+        font: inherit;
+        border-radius: 10px;
+        padding: 11px 16px;
+        margin: 5px 7px 5px 0;
+        border: 1px solid #c2d2cb;
+      }
+      button {
+        background: #195f56;
+        color: white;
+        cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.4;
+        cursor: default;
+      }
+      #stop,
+      #stopShare {
+        background: #824b33;
+      }
+      .status {
+        display: inline-block;
+        background: #e2ebe5;
+        padding: 8px 14px;
+        border-radius: 20px;
+        margin: 3px;
+      }
+      video {
+        width: 100%;
+        max-height: 420px;
+        border-radius: 14px;
+        background: #173638;
+        margin-top: 20px;
+      }
+      #transcript {
+        background: white;
+        padding: 20px;
+        border-radius: 14px;
+        min-height: 60px;
+        margin: 20px 0;
+      }
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 70px;
+        padding: 12px;
+        font: inherit;
+        border: 1px solid #bbcfc6;
+        border-radius: 10px;
+      }
+      details {
+        margin-top: 18px;
+      }
+      summary {
+        cursor: pointer;
+      }
+      pre {
+        white-space: pre-wrap;
+        max-height: 300px;
+        overflow: auto;
+        background: #e4ebe6;
+        padding: 15px;
+        font-size: 12px;
+      }
+      small {
+        display: block;
+        color: #496261;
+        line-height: 1.6;
+      }
+      label {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <span class="status" id="status">尚未连接</span
+    ><span class="status" id="viewStatus">尚未共享画面</span
+    ><span class="status" id="soundStatus">游戏声未共享</span>
+    <h1>一起看游戏</h1>
+    <p>
+      连接后，选择想分享的游戏窗口。可以提问，也可以随时停止说话或结束共享。
+    </p>
+    <div>
+      <label
+        ><input type="checkbox" id="useMicrophone" checked />使用麦克风</label
+      ><label for="language">语言</label
+      ><select id="language">
+        <option value="zh">中文</option>
+        <option value="en">English</option>
+        <option value="auto">自动</option>
+      </select>
+    </div>
+    <button id="connect">连接陪玩</button
+    ><button id="stop" disabled>停止说话</button
+    ><button id="disconnect" disabled>结束对话</button>
+    <div>
+      <select id="game">
+        <option value="cs2">CS2</option>
+        <option value="lol">英雄联盟</option></select
+      ><button id="share" disabled>选择游戏窗口</button
+      ><button id="stopShare" disabled>停止共享</button>
+    </div>
+    <div>
+      <label for="commentaryStyle">这局的陪玩方式</label
+      ><select id="commentaryStyle" disabled>
+        <option value="balanced">适量交流</option>
+        <option value="quiet">少主动说话</option>
+        <option value="brief">回答简短</option>
+        <option value="active">多些互动</option></select
+      ><span id="styleStatus" aria-live="polite"></span>
+    </div>
+    <video id="preview" muted playsinline></video>
+
+    <small
+      >浏览器未提供游戏音轨时，仍可共享画面。分享后可以聊当前画面，也可以随时闲聊。</small
+    >
+    <div id="transcript" aria-live="polite">连接后可以直接说话。</div>
+    <section id="coachResult" aria-live="polite"></section>
+    <section id="results" aria-live="polite"></section>
+    <details>
+      <summary>反馈这次陪玩</summary>
+      <textarea
+        id="feedback"
+        placeholder="哪里看错了，或你希望怎样陪玩？"
+      ></textarea
+      ><button id="sendFeedback">保存反馈</button
+      ><small id="feedbackStatus"></small>
+    </details>
+    <details>
+      <summary>连接信息</summary>
+      <pre id="debug"></pre>
+    </details>
+    <script type="module" src="/static/screen/app.mjs"></script>
+  </body>
+</html>
