@@ -1,260 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" class="arch__svg" viewBox="0 0 1236 400" role="img" aria-labelledby="arch-title arch-desc">
-                <title id="arch-title">Overview of the Jarvis harness</title>
-                <desc id="arch-desc">
-                  Audio from the user reaches the Native Gate of the fast brain, which either lets the frozen speech
-                  model answer directly or delegates the turn. A delegated turn is bound to its transcript, JEV turns it
-                  into typed operations, the Task Ledger runs them on workers and tools, and Delivery sends live results
-                  back to the speech model, which reports playback receipts. Memory serves JEV and the ledger; Jarvis-Omni
-                  adds an Evidence Timeline and Belief State.
-                </desc>
-                <style>.arch__svg {
-  width: 100%;
-  min-width: 880px;
-  height: auto;
-  font-family: Arial, sans-serif;
-}
-.arch-group {
-  stroke-width: 1.4;
-  stroke-dasharray: 6 5;
-}
-.arch-group--fast {
-  fill: rgba(227, 155, 45, 0.05);
-  stroke: rgba(227, 155, 45, 0.75);
-}
-.arch-group--slow {
-  fill: rgba(59, 125, 221, 0.04);
-  stroke: rgba(59, 125, 221, 0.55);
-}
-.arch-tab text {
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-anchor: middle;
-}
-.arch-tab--fast rect {
-  fill: #fbebd2;
-}
-.arch-tab--fast text {
-  fill: #a86a12;
-}
-.arch-tab--slow rect {
-  fill: #d6e4fa;
-}
-.arch-tab--slow text {
-  fill: #174ea6;
-}
-.arch-box rect {
-  stroke-width: 1.3;
-}
-.arch-box--user rect {
-  fill: #f1f4f9;
-  stroke: #9aa5b4;
-}
-.arch-box--amber rect {
-  fill: #fdf3e2;
-  stroke: #e39b2d;
-}
-.arch-box--slate rect {
-  fill: #f3f6fa;
-  stroke: #a0aec0;
-}
-.arch-box--dashed rect {
-  fill: #f8fafc;
-  stroke: #94a3b8;
-  stroke-dasharray: 5 4;
-}
-.arch-box--plum rect {
-  fill: #f1ecfa;
-  stroke: #7c5cbf;
-}
-.arch-box--teal rect {
-  fill: #e5f5f2;
-  stroke: #14998a;
-}
-.arch-box--coral rect {
-  fill: #fbe9e8;
-  stroke: #d9534f;
-}
-.arch-box--jev rect {
-  fill: url(#jev-fill);
-  stroke: none;
-  filter: drop-shadow(0 8px 14px rgba(31, 95, 209, 0.35));
-}
-.arch-title {
-  font-size: 16px;
-  font-weight: 700;
-  fill: #16233d;
-}
-.arch-title--sm {
-  font-size: 14.5px;
-}
-.arch-sub {
-  font-family: monospace;
-  font-size: 10.5px;
-  fill: #5b6478;
-}
-.arch-box--jev .arch-title,
-.arch-box--jev .arch-sub {
-  fill: #fff;
-}
-.arch-arrows path {
-  stroke: #5b6478;
-  stroke-width: 1.5;
-}
-.arch-arrows .arch-arrow--dashed {
-  stroke-dasharray: 5 4;
-}
-.arch-arrows .arch-arrow--coral {
-  stroke: #c2413c;
-}
-.arch-labels text {
-  font-size: 11px;
-  fill: #5b6478;
-}
-.arch-labels .arch-label--strong {
-  font-size: 10.5px;
-  font-weight: 700;
-  fill: #174ea6;
-}
-.arch-labels .arch-label--coral {
-  fill: #b23a35;
-}
-.arch-pulses {
-  opacity: 0;
-  transition: opacity 600ms ease;
-}
-.arch.is-live .arch-pulses {
-  opacity: 1;
-}
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="630" viewBox="0 0 1240 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jarvis architecture</title>
+  <desc id="desc">The fast brain keeps listening and speaking. Its native gate delegates turns through ASR binding to JEV. JEV chooses typed operations on the task ledger, which runs workers and tools. Memory serves JEV and the ledger. Valid results return through the speech model; playback receipts confirm delivery. Jarvis-Omni adds an evidence timeline and belief state.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m0 0 10 5-10 5z" fill="#77859a"/></marker>
+    <marker id="return" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="m0 0 10 5-10 5z" fill="#b94743"/></marker>
+    <linearGradient id="decision"><stop stop-color="#2464c7"/><stop offset="1" stop-color="#7251b8"/></linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1238" height="628" rx="20" fill="#ffffff" stroke="#dbe4f1"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="30" y="40" fill="#16233d" font-size="22" font-weight="700">Conversation continues. Tasks stay in sync.</text>
+    <rect x="170" y="90" width="242" height="497" rx="18" fill="#fcf3e3"/>
+    <rect x="460" y="65" width="754" height="522" rx="18" fill="#f6f8fd" stroke="#dbe4f1"/>
+    <text x="190" y="120" fill="#a86a12" font-size="14" font-weight="700" letter-spacing="1.3">FAST BRAIN</text>
+    <text x="482" y="95" fill="#2464c7" font-size="14" font-weight="700" letter-spacing="1.3">SLOW BRAIN · JARVIS HARNESS</text>
 
-</style><rect width="1236" height="400" fill="white"/><defs>
-                  <marker id="arr-ink" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path d="M0 0 10 5 0 10z" fill="#5b6478" />
-                  </marker>
-                  <marker id="arr-coral" viewBox="0 0 10 10" refX="8.6" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                    <path d="M0 0 10 5 0 10z" fill="#c2413c" />
-                  </marker>
-                  <radialGradient id="pulse-blue">
-                    <stop offset="0" stop-color="#ffffff" />
-                    <stop offset="0.35" stop-color="#3b7ddd" />
-                    <stop offset="1" stop-color="#3b7ddd" stop-opacity="0" />
-                  </radialGradient>
-                  <radialGradient id="pulse-amber">
-                    <stop offset="0" stop-color="#ffffff" />
-                    <stop offset="0.35" stop-color="#e39b2d" />
-                    <stop offset="1" stop-color="#e39b2d" stop-opacity="0" />
-                  </radialGradient>
-                  <linearGradient id="jev-fill" x1="0" x2="1">
-                    <stop offset="0" stop-color="#1f5fd1" />
-                    <stop offset="1" stop-color="#6f56c6" />
-                  </linearGradient>
-                  <path id="arch-journey" d="M118 171H1155H970V316H291V331H118" />
-                  <path id="arch-fast" d="M118 171H291V331H118" />
-                </defs>
-
-
-                <rect class="arch-group arch-group--fast" x="146" y="84" width="290" height="310" rx="18" />
-                <rect class="arch-group arch-group--slow" x="456" y="20" width="778" height="368" rx="18" />
-                <g class="arch-tab arch-tab--fast"><rect x="166" y="74" width="98" height="20" rx="10" /><text x="215" y="88">FAST BRAIN</text></g>
-                <g class="arch-tab arch-tab--slow"><rect x="476" y="10" width="232" height="20" rx="10" /><text x="592" y="24">SLOW BRAIN &#183; JARVIS HARNESS</text></g>
-
-
-                <g class="arch-pulses" aria-hidden="true">
-                  <circle r="9" fill="url(#pulse-amber)">
-                    <animateMotion dur="1.9s" repeatCount="indefinite"><mpath href="#arch-fast" /></animateMotion>
-                  </circle>
-                  <circle r="10" fill="url(#pulse-blue)">
-                    <animateMotion dur="7.2s" repeatCount="indefinite"><mpath href="#arch-journey" /></animateMotion>
-                  </circle>
-                  <circle r="10" fill="url(#pulse-blue)">
-                    <animateMotion dur="7.2s" begin="-3.6s" repeatCount="indefinite"><mpath href="#arch-journey" /></animateMotion>
-                  </circle>
-                </g>
-
-
-                <g class="arch-arrows" fill="none">
-                  <path d="M118 171H166" marker-end="url(#arr-ink)" />
-                  <path d="M291 214V286" marker-end="url(#arr-ink)" />
-                  <path d="M414 171H474" marker-end="url(#arr-ink)" />
-                  <path d="M626 171H658" marker-end="url(#arr-ink)" />
-                  <path d="M818 171H876" marker-end="url(#arr-ink)" />
-                  <path d="M1064 171H1088" marker-start="url(#arr-ink)" marker-end="url(#arr-ink)" />
-                  <path d="M1155 210V288" marker-start="url(#arr-ink)" marker-end="url(#arr-ink)" />
-                  <path d="M970 210V288" marker-end="url(#arr-ink)" />
-                  <path d="M970 114V132" marker-start="url(#arr-ink)" marker-end="url(#arr-ink)" />
-                  <path d="M876 78H790V132" marker-start="url(#arr-ink)" marker-end="url(#arr-ink)" />
-                  <path class="arch-arrow--dashed" d="M676 78H739V132" marker-end="url(#arr-ink)" />
-                  <path d="M168 331H120" marker-end="url(#arr-ink)" />
-                  <path class="arch-arrow--coral" d="M876 316H416" marker-end="url(#arr-coral)" />
-                  <path class="arch-arrow--coral" d="M416 342H876" marker-end="url(#arr-coral)" />
-                </g>
-                <g class="arch-labels">
-                  <text x="142" y="163" text-anchor="middle">audio</text>
-                  <text x="142" y="323" text-anchor="middle">speech</text>
-                  <text x="300" y="255">DIRECT</text>
-                  <text x="445" y="161" text-anchor="middle" class="arch-label--strong">DELEGATE</text>
-                  <text x="848" y="161" text-anchor="middle">typed ops</text>
-                  <text x="746" y="108">visual claims</text>
-                  <text x="978" y="255">live results</text>
-                  <text x="646" y="308" text-anchor="middle" class="arch-label--coral">speech request over the backend channel</text>
-                  <text x="646" y="361" text-anchor="middle" class="arch-label--coral">playback receipts</text>
-                </g>
-
-
-                <g class="arch-box arch-box--user">
-                  <rect x="14" y="128" width="104" height="232" rx="14" />
-                  <text class="arch-title" x="66" y="226" text-anchor="middle">User</text>
-                  <text class="arch-sub" x="66" y="248" text-anchor="middle">mic</text>
-                  <text class="arch-sub" x="66" y="266" text-anchor="middle">screen</text>
-                </g>
-                <g class="arch-box arch-box--amber">
-                  <rect x="168" y="128" width="246" height="86" rx="12" />
-                  <text class="arch-title" x="291" y="164" text-anchor="middle">Native Gate</text>
-                  <text class="arch-sub" x="291" y="188" text-anchor="middle">LISTEN &#183; DIRECT &#183; DELEGATE</text>
-                </g>
-                <g class="arch-box arch-box--slate">
-                  <rect x="168" y="288" width="246" height="86" rx="12" />
-                  <text class="arch-title" x="291" y="324" text-anchor="middle">Frozen speech model</text>
-                  <text class="arch-sub" x="291" y="348" text-anchor="middle">Thinker + Talker, weights unchanged</text>
-                </g>
-                <g class="arch-box arch-box--dashed">
-                  <rect x="476" y="44" width="200" height="68" rx="12" />
-                  <text class="arch-title arch-title--sm" x="576" y="74" text-anchor="middle">Evidence Timeline</text>
-                  <text class="arch-sub" x="576" y="96" text-anchor="middle">Belief State &#183; Jarvis-Omni</text>
-                </g>
-                <g class="arch-box arch-box--plum">
-                  <rect x="878" y="44" width="184" height="68" rx="12" />
-                  <text class="arch-title arch-title--sm" x="970" y="74" text-anchor="middle">Memory</text>
-                  <text class="arch-sub" x="970" y="96" text-anchor="middle">profile &#183; task records</text>
-                </g>
-                <g class="arch-box arch-box--slate">
-                  <rect x="476" y="134" width="150" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="551" y="166" text-anchor="middle">Turn binding</text>
-                  <text class="arch-sub" x="551" y="188" text-anchor="middle">ASR observer</text>
-                </g>
-                <g class="arch-box arch-box--jev">
-                  <rect x="660" y="134" width="158" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="739" y="166" text-anchor="middle">Decision Brain</text>
-                  <text class="arch-sub" x="739" y="188" text-anchor="middle">JEV &#183; typed ops</text>
-                </g>
-                <g class="arch-box arch-box--teal">
-                  <rect x="878" y="134" width="184" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="970" y="166" text-anchor="middle">Task Ledger</text>
-                  <text class="arch-sub" x="970" y="188" text-anchor="middle">versions &#183; freshness</text>
-                </g>
-                <g class="arch-box arch-box--teal">
-                  <rect x="1090" y="134" width="130" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="1155" y="166" text-anchor="middle">Workers</text>
-                  <text class="arch-sub" x="1155" y="188" text-anchor="middle">async tool loops</text>
-                </g>
-                <g class="arch-box arch-box--coral">
-                  <rect x="878" y="290" width="184" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="970" y="322" text-anchor="middle">Delivery</text>
-                  <text class="arch-sub" x="970" y="344" text-anchor="middle">epochs &#183; receipts</text>
-                </g>
-                <g class="arch-box arch-box--slate">
-                  <rect x="1090" y="290" width="130" height="74" rx="12" />
-                  <text class="arch-title arch-title--sm" x="1155" y="322" text-anchor="middle">Tools</text>
-                  <text class="arch-sub" x="1155" y="344" text-anchor="middle">web &#183; files &#183; games</text>
-                </g>
-              </svg>
+    <path d="M136 288H188" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M388 288H480" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M644 288H672" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M838 288H866" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M1038 288H1066" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+    <path d="M288 332V442" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M190 490H138" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M756 200V242" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)" stroke-dasharray="5 5"/>
+    <path d="M868 164H817V242" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+    <path d="M953 200V242" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+    <path d="M953 332V442" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)"/>
+    <path d="M1128 332V442" fill="none" stroke="#77859a" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+    <path d="M868 473H390" fill="none" stroke="#b94743" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#return)"/>
+    <path d="M388 511H866" fill="none" stroke="#b94743" stroke-width="1.8" stroke-linejoin="round" marker-end="url(#return)"/>
+    <text x="162" y="275" text-anchor="middle" fill="#596981" font-size="12" font-weight="400">audio</text>
+    <text x="434" y="275" text-anchor="middle" fill="#2464c7" font-size="11" font-weight="700">DELEGATE</text>
+    <text x="303" y="392" text-anchor="start" fill="#a86a12" font-size="12" font-weight="700">DIRECT</text>
+    <text x="162" y="478" text-anchor="middle" fill="#596981" font-size="12" font-weight="400">speech</text>
+    <text x="742" y="225" text-anchor="end" fill="#596981" font-size="12" font-weight="400">visual claims</text>
+    <text x="965" y="390" text-anchor="start" fill="#596981" font-size="13" font-weight="400">live results</text>
+    <text x="628" y="460" text-anchor="middle" fill="#b94743" font-size="15" font-weight="400">Results in the model’s own voice</text>
+    <text x="628" y="538" text-anchor="middle" fill="#b94743" font-size="15" font-weight="400">Playback receipts</text>
+    <rect x="24" y="244" width="112" height="294" rx="12" fill="#ffffff" stroke="#dbe4f1" stroke-opacity="0.65"/>
+    <text x="80.0" y="378.0" text-anchor="middle" fill="#16233d" font-size="18" font-weight="700">You</text>
+    <text x="80.0" y="402.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Microphone</text>
+    <text x="80.0" y="422.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Screen</text>
+    <rect x="190" y="244" width="198" height="88" rx="12" fill="#fcf3e3" stroke="#a86a12" stroke-opacity="0.65"/>
+    <text x="289.0" y="275.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Native gate</text>
+    <text x="289.0" y="299.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">LISTEN · DIRECT</text>
+    <text x="289.0" y="319.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">DELEGATE</text>
+    <rect x="190" y="444" width="198" height="94" rx="12" fill="#ffffff" stroke="#dbe4f1" stroke-opacity="0.65"/>
+    <text x="289.0" y="478.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Speech model</text>
+    <text x="289.0" y="502.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Thinker + Talker</text>
+    <text x="289.0" y="522.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Frozen speech weights</text>
+    <rect x="482" y="128" width="306" height="72" rx="12" fill="#ffffff" stroke="#dbe4f1" stroke-opacity="0.65" stroke-dasharray="5 4"/>
+    <text x="635.0" y="161.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Evidence timeline</text>
+    <text x="635.0" y="185.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Belief state · Jarvis-Omni</text>
+    <rect x="868" y="128" width="170" height="72" rx="12" fill="#f1ecfa" stroke="#7756b2" stroke-opacity="0.65"/>
+    <text x="953.0" y="161.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Memory</text>
+    <text x="953.0" y="185.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Preferences + facts</text>
+    <rect x="482" y="244" width="162" height="88" rx="12" fill="#ffffff" stroke="#dbe4f1" stroke-opacity="0.65"/>
+    <text x="563.0" y="285.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Turn binding</text>
+    <text x="563.0" y="309.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">ASR observer</text>
+    <rect x="674" y="244" width="164" height="88" rx="12" fill="url(#decision)" stroke="#dbe4f1" stroke-opacity="0.65"/>
+    <text x="756.0" y="285.0" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="700">JEV</text>
+    <text x="756.0" y="309.0" text-anchor="middle" fill="#f0eafa" font-size="14" font-weight="400">Typed decisions</text>
+    <rect x="868" y="244" width="170" height="88" rx="12" fill="#e5f5f1" stroke="#087f74" stroke-opacity="0.65"/>
+    <text x="953.0" y="285.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Task ledger</text>
+    <text x="953.0" y="309.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Versions + freshness</text>
+    <rect x="1068" y="244" width="120" height="88" rx="12" fill="#e5f5f1" stroke="#087f74" stroke-opacity="0.65"/>
+    <text x="1128.0" y="285.0" text-anchor="middle" fill="#16233d" font-size="18" font-weight="700">Workers</text>
+    <text x="1128.0" y="309.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Async tasks</text>
+    <rect x="868" y="444" width="170" height="94" rx="12" fill="#fceeed" stroke="#b94743" stroke-opacity="0.65"/>
+    <text x="953.0" y="488.0" text-anchor="middle" fill="#16233d" font-size="20" font-weight="700">Delivery</text>
+    <text x="953.0" y="512.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Epochs + receipts</text>
+    <rect x="1068" y="444" width="120" height="94" rx="12" fill="#ffffff" stroke="#dbe4f1" stroke-opacity="0.65"/>
+    <text x="1128.0" y="478.0" text-anchor="middle" fill="#16233d" font-size="18" font-weight="700">Tools</text>
+    <text x="1128.0" y="502.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Web · files</text>
+    <text x="1128.0" y="522.0" text-anchor="middle" fill="#596981" font-size="14" font-weight="400">Games</text>
+    <text x="30" y="611" text-anchor="start" fill="#596981" font-size="14" font-weight="400">Native gate shown for Venus. The same task runtime also serves MiniCPM-o and VoiceChat.</text>
+  </g>
+</svg>

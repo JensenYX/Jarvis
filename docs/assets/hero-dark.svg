@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">Jarvis</title>
+  <desc id="desc">A harness for full-duplex Audio and Omni agents. A voice signal stays connected to background tasks while conversation continues.</desc>
+  <defs>
+    <radialGradient id="orb" cx="0.3" cy="0.22" r="0.9"><stop stop-color="#b4d0ff"/><stop offset="0.43" stop-color="#3b7ddd"/><stop offset="1" stop-color="#5a3dbf"/></radialGradient>
+    <linearGradient id="signal"><stop stop-color="#3b7ddd"/><stop offset="1" stop-color="#9c7be1"/></linearGradient>
+    <linearGradient id="rim" x2="0.8" y2="1"><stop stop-color="#ffffff" stop-opacity="0.65"/><stop offset="1" stop-color="#c8b5ff" stop-opacity="0.1"/></linearGradient>
+    </defs>
+  <rect x="1" y="1" width="1198" height="298" rx="24" fill="#101a2c" stroke="#2b3d58"/>
+  <g fill="none" stroke="url(#signal)">
+    <path d="M580 264C690 264 655 64 762 64S855 238 963 238 1091 53 1199 53" stroke-width="1.5" opacity="0.12"/>
+    <path d="M592 282C702 282 667 82 774 82S867 256 975 256 1103 71 1199 71" stroke-width="1.5" opacity="0.08"/>
+  </g>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="63" cy="57" r="5" fill="#3b7ddd"/>
+    <text x="79" y="62" fill="#82b1ff" font-size="13" font-weight="700" letter-spacing="2.4">FULL-DUPLEX AGENT HARNESS</text>
+    <text x="54" y="170" fill="#e9effb" font-size="104" font-weight="700" letter-spacing="-5">Jarvis</text>
+    <text x="59" y="211" fill="#a5b4cc" font-size="22">Keep talking while the work gets done.</text>
+    <rect x="59" y="239" width="74" height="26" rx="13" fill="#192f50"/>
+    <text x="96" y="257" text-anchor="middle" fill="#82b1ff" font-size="12" font-weight="700" letter-spacing="1.1">AUDIO</text>
+    <rect x="141" y="239" width="70" height="26" rx="13" fill="#2c2443"/>
+    <text x="176" y="257" text-anchor="middle" fill="#c3a6f1" font-size="12" font-weight="700" letter-spacing="1.1">OMNI</text>
+    <text x="229" y="257" fill="#a5b4cc" font-size="14">Tools · Memory · Vision</text>
+    <text x="763" y="46" text-anchor="middle" fill="#82b1ff" font-size="11" font-weight="700" letter-spacing="2">FAST TALK</text>
+    <circle cx="763" cy="151" r="83" fill="none" stroke="#82b1ff" stroke-opacity="0.14"/>
+    <circle cx="763" cy="151" r="99" fill="none" stroke="#82b1ff" stroke-opacity="0.07"/>
+    <circle cx="763" cy="151" r="63" fill="url(#orb)"/>
+    <circle cx="763" cy="151" r="62" fill="none" stroke="url(#rim)" stroke-width="1.5"/>
+    <g fill="#ffffff"><rect x="733" y="144.0" width="7" height="14" rx="3.5"/><rect x="742" y="137.0" width="7" height="28" rx="3.5"/><rect x="751" y="129.5" width="7" height="43" rx="3.5"/><rect x="760" y="121.0" width="7" height="60" rx="3.5"/><rect x="769" y="129.5" width="7" height="43" rx="3.5"/><rect x="778" y="137.0" width="7" height="28" rx="3.5"/><rect x="787" y="144.0" width="7" height="14" rx="3.5"/></g>
+    <path d="M829 124H892" fill="none" stroke="#82b1ff" stroke-width="2"/>
+    <path d="m886 119 6 5-6 5" fill="none" stroke="#82b1ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M892 181H829" fill="none" stroke="#c3a6f1" stroke-width="2"/>
+    <path d="m835 176-6 5 6 5" fill="none" stroke="#c3a6f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1024" y="46" text-anchor="middle" fill="#70d9c4" font-size="11" font-weight="700" letter-spacing="2">SLOW WORK</text>
+    <rect x="904" y="69" width="232" height="166" rx="16" fill="#152238" stroke="#2b3d58"/>
+    <text x="924" y="100" fill="#e9effb" font-size="15" font-weight="700">Task ledger</text>
+    <circle cx="1115" cy="95" r="4" fill="#70d9c4"/>
+    <path d="M922 115H1118" stroke="#2b3d58"/>
+    <circle cx="928" cy="139" r="4" fill="#82b1ff"/>
+    <text x="941" y="144" fill="#a5b4cc" font-size="13">Reason &amp; use tools</text>
+    <rect x="941" y="152" width="175" height="4" rx="2" fill="#192f50"/>
+    <rect x="941" y="152" width="115" height="4" rx="2" fill="#82b1ff"/>
+    <circle cx="928" cy="179" r="4" fill="#c3a6f1"/>
+    <text x="941" y="184" fill="#a5b4cc" font-size="13">Keep context</text>
+    <circle cx="928" cy="208" r="4" fill="#70d9c4"/>
+    <text x="941" y="213" fill="#a5b4cc" font-size="13">Deliver in voice</text>
+    <text x="922" y="266" text-anchor="middle" fill="#a5b4cc" font-size="13">One conversation. Work in parallel.</text>
+  </g>
+</svg>

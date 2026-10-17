@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="300" viewBox="0 0 720 300" role="img" aria-labelledby="title desc">
+  <title id="title">Jarvis</title>
+  <desc id="desc">Keep talking while the work gets done. A harness for full-duplex Audio and Omni agents.</desc>
+  <defs>
+    <radialGradient id="orb" cx="0.3" cy="0.22" r="0.9"><stop stop-color="#b4d0ff"/><stop offset="0.43" stop-color="#3b7ddd"/><stop offset="1" stop-color="#5a3dbf"/></radialGradient>
+  </defs>
+  <rect x="1" y="1" width="718" height="298" rx="24" fill="#101a2c" stroke="#2b3d58"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <circle cx="44" cy="48" r="5" fill="#3b7ddd"/>
+    <text x="60" y="53" fill="#82b1ff" font-size="14" font-weight="700" letter-spacing="1.5">FULL-DUPLEX AGENT HARNESS</text>
+    <text x="35" y="162" fill="#e9effb" font-size="112" font-weight="700" letter-spacing="-5">Jarvis</text>
+    <text x="40" y="211" fill="#a5b4cc" font-size="23">Keep talking while the work gets done.</text>
+    <rect x="40" y="239" width="86" height="30" rx="15" fill="#192f50"/>
+    <text x="83" y="260" text-anchor="middle" fill="#82b1ff" font-size="15" font-weight="700" letter-spacing="1">AUDIO</text>
+    <rect x="137" y="239" width="80" height="30" rx="15" fill="#2c2443"/>
+    <text x="177" y="260" text-anchor="middle" fill="#c3a6f1" font-size="15" font-weight="700" letter-spacing="1">OMNI</text>
+    <text x="238" y="260" fill="#a5b4cc" font-size="17">Tools · Memory · Vision</text>
+    <circle cx="568" cy="131" r="87" fill="none" stroke="#82b1ff" stroke-opacity="0.12"/>
+    <circle cx="568" cy="131" r="103" fill="none" stroke="#82b1ff" stroke-opacity="0.06"/>
+    <circle cx="568" cy="131" r="64" fill="url(#orb)"/>
+    <g fill="#ffffff" transform="translate(0 -17)"><rect x="538" y="141.0" width="7" height="14" rx="3.5"/><rect x="547" y="134.0" width="7" height="28" rx="3.5"/><rect x="556" y="126.5" width="7" height="43" rx="3.5"/><rect x="565" y="118.0" width="7" height="60" rx="3.5"/><rect x="574" y="126.5" width="7" height="43" rx="3.5"/><rect x="583" y="134.0" width="7" height="28" rx="3.5"/><rect x="592" y="141.0" width="7" height="14" rx="3.5"/></g>
+  </g>
+</svg>
