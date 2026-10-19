@@ -8,10 +8,18 @@
 </p>
 
 <p align="center">
-  <strong>Coordinating Fast Talk and Slow Work<br>in Full-Duplex Audio and Omni Agents</strong>
+  <strong>Coordination Deserves a Brain of Its Own<br>in Agentic Interactive Models</strong>
 </p>
 
 <p align="center">
+  <a href="https://arxiv.org/abs/2610.23804"><img src="https://img.shields.io/badge/arXiv-2610.23804-b31b1b?logo=arxiv&logoColor=white" alt="arXiv paper 2610.23804"></a>
+  <a href="https://amphionteam.github.io/Jarvis-Demo/"><img src="https://img.shields.io/badge/Demo-Watch_online-2464c7?logo=airplayvideo&logoColor=white" alt="Demo page"></a>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/Python-3.11-7756b2?logo=python&logoColor=white" alt="Python 3.11"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-087f74" alt="Apache-2.0 license"></a>
+</p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2610.23804">Paper</a> &nbsp;·&nbsp;
   <a href="https://amphionteam.github.io/Jarvis-Demo/">Watch demos</a> &nbsp;·&nbsp;
   <a href="#quick-start">Quick start</a> &nbsp;·&nbsp;
   <a href="#how-it-works">Architecture</a> &nbsp;·&nbsp;
@@ -267,19 +275,23 @@ examples/     Tool registration and configuration examples
 
 ## Citation
 
-<details>
-<summary><strong>BibTeX</strong></summary>
+If Jarvis is useful in your research, please cite our paper:
+
+> **[Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models](https://arxiv.org/abs/2610.23804)**<br>
+> Yuxiang Wang, Shengbo Cai, Zhixian Zhao, Yingda Shen, Yuancheng Wang, Xueyao Zhang, Liqiang Zhang, Teddy Sun, Steve Yves, Zhizheng Wu<br>
+> *arXiv preprint arXiv:2610.23804*, 2026 &nbsp;·&nbsp; [Abstract](https://arxiv.org/abs/2610.23804) &nbsp;·&nbsp; [PDF](https://arxiv.org/pdf/2610.23804)
 
 ```bibtex
-@techreport{jarvis2026,
-  title = {Jarvis: Coordinating Fast Talk and Slow Work in Full-Duplex Audio and Omni Agents},
-  author = {{Jarvis Team}},
-  year = {2026},
-  url = {https://amphionteam.github.io/Jarvis-Demo/}
+@misc{wang2026jarvis,
+  title         = {Jarvis: Coordination Deserves a Brain of Its Own in Agentic Interactive Models},
+  author        = {Wang, Yuxiang and Cai, Shengbo and Zhao, Zhixian and Shen, Yingda and Wang, Yuancheng and Zhang, Xueyao and Zhang, Liqiang and Sun, Teddy and Yves, Steve and Wu, Zhizheng},
+  year          = {2026},
+  eprint        = {2610.23804},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.SD},
+  url           = {https://arxiv.org/abs/2610.23804}
 }
 ```
-
-</details>
 
 ## License
 
